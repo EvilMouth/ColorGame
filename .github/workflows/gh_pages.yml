@@ -1,7 +1,7 @@
 name: Flutter Web Github Pages
 
-on:
-  push: [master]
+# on:
+#   push: [master]
 
 jobs:
   build:
