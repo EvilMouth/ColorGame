@@ -61,10 +61,20 @@ class _ColorGameState extends State<ColorGamePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Color Game')),
-      body: Center(child: _buildColorText()),
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text('游戏规则：1s内说出颜色'),
+          ),
+          Center(
+            child: _buildColorText(),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _refreshColor,
-        child: Icon(Icons.navigate_next),
+        child: Icon(Icons.refresh),
       ),
     );
   }
